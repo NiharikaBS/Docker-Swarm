@@ -1,0 +1,38 @@
+@import '@/styles/base/_variables';
+
+.options {
+  &Container {
+    left: 0;
+
+    &ToUp {
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    &ToDown {
+      bottom: 0;
+      transform: translateY(100%);
+    }
+
+    &IsActive {
+      display: flex;
+    }
+  }
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconSearchContainer {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}

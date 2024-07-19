@@ -1,0 +1,61 @@
+@import '@/styles/base/_variables.scss';
+@import '@/styles/base/_mixins.scss';
+
+%fileContainer {
+  width: 100px;
+  height: 100px;
+  padding: 0.5rem;
+  border: dashed 1px #ccc;
+  border-radius: 10px;
+}
+
+%cropper {
+  max-width: 100%;
+}
+
+.iconContainer {
+  width: 100px;
+  height: 100px;
+  padding: 0.5rem;
+  border: dashed 1px #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.imagePreviewContainer {
+  background-color: white;
+  overflow: hidden;
+  width: 90px;
+  height: 60px;
+  // border-radius: 50%;
+
+  & img {
+    border-radius: 10px;
+  }
+}
+
+.previewContainer {
+  border: solid 1px blue;
+  border-radius: 5px;
+}
+
+.cropperContainer {
+  // box-shadow: map-get($boxShadows, 'type1');
+  @extend %cropper;
+}
+
+.reactCropper {
+  @extend %cropper;
+  position: relative !important;
+}
+
+.cropper {
+  @extend %cropper;
+  position: relative !important;
+}
+
+.canvasContainer {
+  position: absolute;
+  visibility: hidden;
+  z-index: -10;
+}

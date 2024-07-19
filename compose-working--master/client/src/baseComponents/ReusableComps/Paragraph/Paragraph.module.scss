@@ -1,0 +1,14 @@
+.paragraphOne {
+  line-height: 2rem;
+
+  &Justified {
+    text-align: justify;
+    text-justify: distribute;
+    hyphens: auto;
+  }
+
+  &Centeralized {
+    line-height: 2rem;
+    text-align: center;
+  }
+}

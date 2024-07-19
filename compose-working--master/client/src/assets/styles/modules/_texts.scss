@@ -1,0 +1,31 @@
+@each $name, $val in $fontTypes {
+  $className: 'f-' + $name;
+  .#{$className} {
+    font-family: $val;
+  }
+}
+
+@each $name, $val in $fontSizes {
+  $className: 'f-s-' + $name;
+  .#{$className} {
+    font-size: $val;
+  }
+}
+
+@each $category, $key in $fontCategories {
+  .f-s-#{$category} {
+    font-size: map-get($fontSizes, '#{$key}-xs');
+
+    @include atSmall {
+      font-size: map-get($fontSizes, '#{$key}-sm');
+    }
+
+    @include atMedium {
+      font-size: map-get($fontSizes, '#{$key}-md');
+    }
+
+    @include atLarge {
+      font-size: map-get($fontSizes, '#{$key}-lg');
+    }
+  }
+}

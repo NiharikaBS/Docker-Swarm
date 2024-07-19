@@ -1,0 +1,72 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/_mixins';
+
+.downIcon {
+  transform: rotate(-90deg);
+}
+
+.upIcon {
+  transform: rotate(90deg);
+}
+
+.selectable {
+  border-bottom: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+%oneLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.th {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  @extend %oneLine;
+  background-color: white;
+}
+
+.tr {
+  & .td {
+    font-size: 12px;
+    border: none;
+  }
+
+  &:nth-child(odd) {
+    background-color: white;
+  }
+
+  &:nth-child(even) {
+    background-color: orange;
+  }
+
+  &:last-child {
+    & .td {
+      border-bottom: none;
+    }
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.td {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: solid 0.2px red;
+
+  &:last-child {
+    border-right: none;
+  }
+}

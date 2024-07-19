@@ -1,0 +1,17 @@
+.input {
+  border-radius: 10px !important;
+  border: transparent !important;
+  width: 0px !important;
+  transition: all 0.4s ease-in-out !important;
+  padding: 0 !important;
+
+  &:focus {
+    outline: none !important;
+    background-color: transparent !important;
+  }
+
+  &Active {
+    width: 120px !important;
+    padding: 0px 4px !important;
+  }
+}

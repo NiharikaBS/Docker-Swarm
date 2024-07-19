@@ -1,0 +1,32 @@
+@import '@/styles/base/_variables';
+
+.elementContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 2s linear;
+
+  &Active {
+    max-height: 5000px;
+    height: auto;
+  }
+}
+
+.iconsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  margin: 1rem auto;
+}
+
+.card {
+  margin: 1rem auto;
+  padding: 1rem;
+  background: rgba($color: #000000, $alpha: 0.2);
+}
+
+.animatedOnScroll {
+  transition: all 0.3s ease-in-out;
+
+  &IsActive {
+    transform: translateX(100px);
+  }
+}

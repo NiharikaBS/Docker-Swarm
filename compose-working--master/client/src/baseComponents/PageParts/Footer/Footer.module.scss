@@ -1,0 +1,6 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/mixins';
+
+.heightForText {
+  height: calc(100% - 30px);
+}

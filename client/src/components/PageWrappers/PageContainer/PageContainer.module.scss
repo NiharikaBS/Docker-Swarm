@@ -1,0 +1,45 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/_mixins';
+
+.sideBar {
+  &Container {
+    margin-top: map-get($heights, 'app-header');
+  }
+}
+
+.headerAndBodyContianer {
+  overflow-y: auto;
+
+  @include atMedium {
+    overflow-y: hidden;
+  }
+}
+
+.bodyContainer {
+  @include atMedium {
+    overflow-y: auto;
+    height: calc(100vh - map-get($heights, 'header'));
+  }
+}
+
+.container {
+  transition: all 0.3s ease-in-out;
+  @include atMedium {
+    margin-left: map-get($widths, 'side-bar-closed');
+  }
+
+  &WhenDashboardIsActive {
+    @include atMedium {
+      margin-left: map-get($widths, 'side-bar-opened');
+    }
+  }
+}
+
+.mainContentContainer {
+  padding-top: map-get($heights, 'header');
+}
+
+.scrollToTopContainer {
+  bottom: 1rem;
+  right: 2rem;
+}

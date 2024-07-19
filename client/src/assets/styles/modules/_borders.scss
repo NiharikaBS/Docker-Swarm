@@ -1,0 +1,17 @@
+@each $name, $color in $colors {
+  $className: 'br-' + $name;
+  .#{$className} {
+    border-color: $color;
+  }
+
+  .#{$className}-on-hover:hover {
+    border-color: $color;
+  }
+}
+
+@each $name, $val in $borderRads {
+  $className: 'br-rad-' + $name;
+  .#{$className} {
+    border-radius: $val;
+  }
+}

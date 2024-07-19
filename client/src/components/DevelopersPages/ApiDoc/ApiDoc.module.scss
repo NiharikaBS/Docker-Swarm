@@ -1,0 +1,128 @@
+.item {
+  &Container {
+    background-color: #e8e8e8;
+  }
+
+  &GET {
+    &Container {
+      border: solid 3px;
+      border-color: rgb(112, 238, 127);
+    }
+
+    &CategoryContainer {
+      background-color: rgb(112, 238, 127);
+    }
+
+    &Btn {
+      background-color: rgb(112, 238, 127);
+    }
+  }
+
+  &POST {
+    &Container {
+      border: solid 3px;
+      border-color: rgb(231, 223, 157);
+    }
+
+    &CategoryContainer {
+      background-color: rgb(231, 223, 157);
+    }
+
+    &Btn {
+      background-color: rgb(231, 223, 157);
+    }
+  }
+
+  &PUT {
+    &Container {
+      border: solid 3px;
+      border-color: rgb(177, 166, 238);
+    }
+
+    &CategoryContainer {
+      background-color: rgb(177, 166, 238);
+    }
+
+    &Btn {
+      background-color: rgb(185, 139, 197);
+    }
+  }
+
+  &PATCH {
+    &Container {
+      border: solid 3px;
+      border-color: rgb(211, 205, 244);
+    }
+
+    &CategoryContainer {
+      background-color: rgb(211, 205, 244);
+    }
+
+    &Btn {
+      background-color: rgb(211, 205, 244);
+    }
+  }
+
+  &DELETE {
+    &Container {
+      border: solid 3px;
+      border-color: rgb(226, 174, 174);
+    }
+
+    &CategoryContainer {
+      background-color: rgb(226, 174, 174);
+    }
+
+    &Btn {
+      background-color: rgb(226, 174, 174);
+    }
+  }
+
+  &Response {
+    &Success {
+      &Container {
+        background-color: rgb(177, 234, 177);
+      }
+    }
+
+    &Error {
+      &Container {
+        background-color: rgb(234, 159, 159);
+      }
+    }
+  }
+}
+
+@import '@/styles/base/_variables';
+@import '@/styles/base/_mixins';
+
+$closeContainerHeight: 40px;
+
+.modal {
+  &Container {
+    max-width: 700px;
+    min-width: 350px;
+    max-height: 85vh;
+    overflow: hidden;
+
+    @include atMedium {
+      max-height: 90vh;
+    }
+  }
+
+  &MainContentContainer {
+    max-height: calc(85vh - $closeContainerHeight);
+
+    @include atMedium {
+      max-height: calc(90vh - $closeContainerHeight);
+    }
+  }
+
+  &InfoTextContainer {
+    line-height: 2rem;
+
+    & p {
+      margin-bottom: 2rem;
+    }
+  }
+}

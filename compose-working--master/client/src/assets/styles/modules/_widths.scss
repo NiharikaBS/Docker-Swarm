@@ -1,0 +1,6 @@
+@each $name, $val in $widths {
+  $className: 'width-' + $name;
+  .#{$className} {
+    width: $val;
+  }
+}

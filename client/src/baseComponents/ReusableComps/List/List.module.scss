@@ -1,0 +1,18 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/mixins';
+
+.type1 {
+  &CheckContainer {
+    background-color: #5243c22a ;
+  }
+}
+
+.item2 {
+  &Container {
+    flex-direction: column;
+
+    @include atMedium {
+      flex-direction: row;
+    }
+  }
+}

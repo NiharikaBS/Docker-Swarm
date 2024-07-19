@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(158, 26, 255);
+  background: linear-gradient(90deg, rgba(#a761ff), rgba(#666dff));
+  color: #fff; /* Text color */
+  font-family: "Poppins", sans-serif;
+}
+
+.maintenance-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  align-items: center;
+}
+
+.image-container {
+  /* background-color: antiquewhite; */
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%; /* Adjust the width of the image */
+  max-width: 400px; /* Set a maximum width to maintain responsiveness */
+  height: auto;
+  display: block;
+}
+
+.text-container {
+  /* background-color: red; */
+  flex: 2;
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2em; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+p {
+  font-size: 1.2em; /* Adjust font size as needed */
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 1000px) {
+  .maintenance-container {
+    flex-direction: column;
+  }
+
+  .text-container {
+    /* background-color: red; */
+    text-align: center;
+  }
+}

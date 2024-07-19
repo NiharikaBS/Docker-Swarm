@@ -1,0 +1,35 @@
+@import '@/styles/base/_variables';
+@import '@/styles/base/_mixins';
+
+.dashboard {
+  transition: all 0.3s ease-in-out;
+  width: map-get($widths, 'side-bar-closed');
+  height: calc(100vh - map-get($heights, 'app-header'));
+
+  &IsActive {
+    width: 180px;
+  }
+
+  &Breaker {
+    height: 2px;
+    border-radius: 5px;
+  }
+}
+
+.menuItems {
+  &:hover {
+    color: blue;
+  }
+}
+
+.toggler {
+  transition: all 0.3s ease-in-out;
+
+  &DashboardIsClose {
+    left: calc(map-get($widths, 'side-bar-closed') - 20px);
+  }
+
+  &DashboardIsOpen {
+    left: calc(map-get($widths, 'side-bar-opened') - 25px);
+  }
+}

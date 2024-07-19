@@ -1,0 +1,25 @@
+@import '@/styles/base/_variables';
+
+.input::placeholder {
+  color: silver;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 46px;
+  left: 6px;
+}
+
+.lineThrough {
+  position: absolute;
+  top: 35px;
+  left: 12px;
+  height: 18px;
+  background-color: black;
+  width: 2px;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,17 @@
+@import '@/styles/base/_variables';
+
+.close {
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border: solid 1px;
+}
+
+.close2 {
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  border: solid 1px red;
+}

@@ -1,0 +1,9 @@
+@import '@/styles/base/_variables';
+
+.item {
+  transform: translateX(200%);
+
+  &IsActive {
+    transform: translateX(0);
+  }
+}
