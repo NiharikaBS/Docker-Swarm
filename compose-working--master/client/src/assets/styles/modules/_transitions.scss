@@ -1,6 +1,0 @@
-@each $name, $val in $transitions {
-  $className: 'transition-' + $name;
-  .#{$className} {
-    transition: $val;
-  }
-}

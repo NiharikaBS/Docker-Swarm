@@ -1,6 +1,0 @@
-@each $name, $val in $heights {
-  $className: 'height-' + $name;
-  .#{$className} {
-    height: $val;
-  }
-}
